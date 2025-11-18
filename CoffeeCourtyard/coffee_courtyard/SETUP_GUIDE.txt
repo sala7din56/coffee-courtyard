@@ -1,0 +1,118 @@
+================================================================================
+                    COFFEE COURTYARD - QUICK SETUP GUIDE
+================================================================================
+
+Follow these steps to get your Coffee CourtYard website running:
+
+================================================================================
+STEP 1: INSTALL XAMPP
+================================================================================
+
+1. Download XAMPP from: https://www.apachefriends.org/
+2. Install XAMPP (use default settings)
+3. Open XAMPP Control Panel
+
+================================================================================
+STEP 2: CONFIGURE XAMPP FOR PORT 8080
+================================================================================
+
+1. In XAMPP Control Panel, click "Config" next to Apache
+2. Select "httpd.conf"
+3. Find line: "Listen 80" → Change to: "Listen 8080"
+4. Find line: "ServerName localhost:80" → Change to: "ServerName localhost:8080"
+5. Save and close the file
+
+================================================================================
+STEP 3: COPY PROJECT FILES
+================================================================================
+
+1. Copy the "coffee_courtyard" folder to:
+   - Windows: C:\xampp\htdocs\
+   - Mac: /Applications/XAMPP/htdocs/
+   - Linux: /opt/lampp/htdocs/
+
+2. Final path should be: htdocs/coffee_courtyard/
+
+================================================================================
+STEP 4: START SERVICES
+================================================================================
+
+1. In XAMPP Control Panel:
+   - Click "Start" for Apache
+   - Click "Start" for MySQL
+2. Both should show green "Running" status
+
+================================================================================
+STEP 5: CREATE DATABASE
+================================================================================
+
+1. Open browser and go to: http://localhost:8080/phpmyadmin
+2. Click "New" in left sidebar
+3. Database name: coffee_courtyard_db
+4. Click "Create"
+5. Select the new database
+6. Click "Import" tab
+7. Click "Choose File"
+8. Select: coffee_courtyard/database/coffee_courtyard_db.sql
+9. Click "Go" at bottom
+10. Wait for "Import has been successfully finished"
+
+================================================================================
+STEP 6: ACCESS YOUR WEBSITE
+================================================================================
+
+PUBLIC WEBSITE:
+http://localhost:8080/coffee_courtyard/public/
+
+ADMIN DASHBOARD:
+http://localhost:8080/coffee_courtyard/admin/login.php
+
+DEFAULT LOGIN:
+Username: admin
+Password: admin123
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Apache won't start
+Solution: Port 8080 might be in use. Change to 8081 in httpd.conf
+
+Problem: Can't connect to database
+Solution: Make sure MySQL is running in XAMPP Control Panel
+
+Problem: 404 Page Not Found
+Solution: Check that folder is at: htdocs/coffee_courtyard/
+
+Problem: Images won't upload
+Solution: Make sure folder exists: public/images/uploads/
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Login to admin dashboard
+2. Add your menu items with images
+3. Edit homepage content
+4. Change default admin password!
+5. Customize colors if desired
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ Always start Apache and MySQL before using the website
+✓ Keep XAMPP running while testing
+✓ Backup your database regularly from phpMyAdmin
+✓ Change admin password after first login
+✓ Test on different devices for responsive design
+
+================================================================================
+
+For detailed documentation, see README.md file.
+
+Need help? Review the code comments - they explain everything!
+
+================================================================================
+                            ENJOY YOUR WEBSITE!
+================================================================================

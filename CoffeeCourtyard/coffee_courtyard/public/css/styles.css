@@ -1,0 +1,205 @@
+/**
+ * Custom Styles for Coffee CourtYard
+ * Supplements TailwindCSS with additional custom styles
+ */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fefae0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dda15e;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bc6c25;
+}
+
+/* Alert messages */
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #dda15e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Image hover effects */
+img.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+img.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Button loading state */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+/* Form validation */
+input.error,
+textarea.error,
+select.error {
+    border-color: #dc3545 !important;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin dashboard specific styles */
+.admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #283618;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+}
+
+.admin-content {
+    margin-left: 250px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+}
+
+/* Table styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: #dda15e;
+    color: #283618;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem;
+}
+
+.data-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table tr:hover {
+    background-color: #fefae0;
+}
+
+/* Image preview */
+.image-preview {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}

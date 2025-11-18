@@ -1,0 +1,40 @@
+# Coffee CourtYard - Admin Directory .htaccess
+# Additional security for admin area
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /coffee_courtyard/admin/
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "(^\.htaccess|\.sql|\.md|\.txt|auth_check\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Block common hack attempts
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
+    RewriteRule .* - [F]
+</IfModule>
+
+# Increase session timeout
+php_value session.gc_maxlifetime 3600
+php_value session.cookie_lifetime 3600

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -r:*)",
+      "Bash(\"D:\\xampp\\php\\php.exe\" -r \"echo password_hash(''admin123'', PASSWORD_BCRYPT);\")",
+      "Bash(\"D:\\xampp\\mysql\\bin\\mysql.exe\" -u root -e \"USE coffee_courtyard_db; UPDATE admin_users SET password_hash = ''$2y$10$lH9dGt7rgWz3alLp2uXr4uhqA1VfkqCldKIIjnTTdJTwUbr8B6saS'' WHERE username = ''admin'';\")",
+      "Bash(\"D:\\xampp\\mysql\\bin\\mysql.exe\" -u root coffee_courtyard_db -e \"UPDATE admin_users SET password_hash = ''$2y$10$lH9dGt7rgWz3alLp2uXr4uhqA1VfkqCldKIIjnTTdJTwUbr8B6saS'' WHERE username = ''admin'';\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
