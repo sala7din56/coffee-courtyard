@@ -28,7 +28,7 @@ foreach ($menuItems as $item) {
                 <div class="flex min-h-[500px] flex-col items-center justify-center gap-6 rounded-xl bg-cover bg-center bg-no-repeat p-4 text-center"
                      style='background-image: linear-gradient(rgba(40, 54, 24, 0.4) 0%, rgba(40, 54, 24, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCP7p5H1mmlEAMGioR3cSUTNeLKD0QIruwoxWWDR71E-e8aVFX4A3P2r-3D0RyE1QZj_31mmQgQbQeTu6cgkzkcCw5f2eQmMiVTvUWwEXwwm2LHCtFsPhJkyPa7bj0MwitWmz1hXRuntkA2xRtUa7LzjoY0VQ29Ksv2rND6urpcfjnw7SRqRgYaSuQDFDJ7mBXkfrE-IlA1xYGcWCJSbf1sHEd0PkkyvoL1VLVnhz1BP-bPMYM87e-JdLpLX-MRQpePYwvCy1-4mQU");'>
                     <div class="flex flex-col gap-4">
-                        <h1 class="text-4xl font-black leading-tight tracking-tight text-background-light md:text-6xl">
+                        <h1 class="text-5xl font-bold leading-tight tracking-tight text-background-light md:text-7xl">
                             <?= htmlspecialchars($content['hero_title']['content_text'] ?? 'Your Everyday Escape.') ?>
                         </h1>
                         <h2 class="text-base font-normal leading-normal text-background-light/90 md:text-lg">
@@ -180,21 +180,27 @@ foreach ($menuItems as $item) {
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold leading-tight tracking-tight text-text-accent-light dark:text-text-accent-dark">Visit Us</h2>
                 </div>
-                <div class="grid grid-cols-1 gap-8 overflow-hidden rounded-xl border border-primary/20 md:grid-cols-2">
-                    <div class="bg-primary/10 p-8 dark:bg-white/5">
-                        <h3 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Address</h3>
+                <div class="grid grid-cols-1 gap-8 overflow-hidden rounded-xl border border-primary/30 shadow-xl bg-background-light dark:bg-background-dark md:grid-cols-2">
+                    <div class="p-8 bg-background-light dark:bg-background-dark">
+                        <h3 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">location_on</span>Address
+                        </h3>
                         <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">
                             <?= htmlspecialchars($content['contact_address']['content_text'] ?? '123 Cafe Lane, Roastville, CA 90210') ?>
                         </p>
 
-                        <h3 class="mt-6 text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Hours</h3>
+                        <h3 class="mt-6 text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">schedule</span>Hours
+                        </h3>
                         <ul class="mt-2 space-y-1 text-text-secondary-light dark:text-text-secondary-dark">
                             <li>Mon-Fri: 6:00 AM - 6:00 PM</li>
                             <li>Sat: 7:00 AM - 5:00 PM</li>
                             <li>Sun: 7:00 AM - 3:00 PM</li>
                         </ul>
 
-                        <h3 class="mt-6 text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Contact</h3>
+                        <h3 class="mt-6 text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">call</span>Contact
+                        </h3>
                         <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">
                             <?= htmlspecialchars($content['contact_email']['content_text'] ?? 'hello@coffeecourtyard.com') ?>
                         </p>
@@ -204,11 +210,10 @@ foreach ($menuItems as $item) {
                             </p>
                         <?php endif; ?>
                     </div>
-                    <div class="min-h-[300px] w-full">
+                    <div class="h-[400px] w-full rounded-xl overflow-hidden">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205702.08756872435!2d43.70754806110078!3d36.1989178124126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400722fe13443461%3A0x3e01d63391de79d1!2sErbil%2C%20Erbil%20Governorate!5e0!3m2!1sen!2siq!4v1763160598597!5m2!1sen!2siq"
-                                width="100%"
-                                height="100%"
-                                style="border:0; min-height: 400px;"
+                                class="h-full w-full"
+                                style="border:0;"
                                 allowfullscreen=""
                                 loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">

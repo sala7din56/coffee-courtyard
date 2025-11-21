@@ -75,6 +75,10 @@ $recentMenu = $db->query($recentMenuQuery)->fetch_all(MYSQLI_ASSOC);
                         <span class="material-symbols-outlined">payments</span>
                         <span>Employee Financials</span>
                     </a>
+                    <a href="order_reports.php" class="flex items-center gap-3 px-4 py-3 hover:bg-white/10 rounded-lg transition">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <span>Order Reports</span>
+                    </a>
                     <a href="../public/index.php" target="_blank" class="flex items-center gap-3 px-4 py-3 hover:bg-white/10 rounded-lg transition">
                         <span class="material-symbols-outlined">open_in_new</span>
                         <span>View Website</span>
