@@ -1,0 +1,307 @@
+================================================================================
+                   COFFEE COURTYARD - FILE MANIFEST
+================================================================================
+
+This document lists all files included in the Coffee CourtYard project.
+
+================================================================================
+ROOT DIRECTORY FILES
+================================================================================
+
+📄 README.md                          - Complete project documentation
+📄 SETUP_GUIDE.txt                    - Quick setup instructions
+📄 PROJECT_SUMMARY.md                 - Project overview and status
+📄 DEPLOYMENT_CHECKLIST.md            - Step-by-step deployment guide
+📄 ADMIN_QUICK_REFERENCE.md           - Admin user quick guide
+📄 FILE_MANIFEST.txt                  - This file
+
+================================================================================
+DATABASE FOLDER (/database/)
+================================================================================
+
+📄 coffee_courtyard_db.sql            - Complete database schema with sample data
+   - Creates: coffee_courtyard_db database
+   - Tables: admin_users, menu_items, homepage_content
+   - Includes: Default admin user and sample menu items
+
+================================================================================
+INCLUDES FOLDER (/includes/)
+================================================================================
+
+📄 config.php                          - Configuration settings
+   - Database credentials
+   - Base URLs
+   - Upload directories
+   - Timezone settings
+
+📄 db.php                              - Database connection class
+   - Connection management
+   - Prepared statement helpers
+   - Transaction support
+   - Error handling
+
+📄 functions.php                       - Helper functions
+   - Input sanitization
+   - Email validation
+   - File upload handling
+   - Menu/content retrieval
+   - Authentication checks
+   - Display helpers
+
+================================================================================
+PUBLIC FOLDER (/public/)
+================================================================================
+
+📄 index.php                           - Main website homepage
+   - Single-page design
+   - Dynamic content loading
+   - Responsive layout
+   - All website sections
+
+📁 css/
+   📄 styles.css                       - Custom CSS styles
+      - Alert styles
+      - Form validation
+      - Loading states
+      - Card effects
+      - Admin dashboard styles
+
+📁 js/
+   📄 main.js                          - JavaScript functionality
+      - Smooth scrolling
+      - Form validation
+      - Image preview
+      - Mobile menu
+      - Helper functions
+
+📁 images/
+   📁 uploads/                         - User-uploaded images
+      - Menu item images
+      - Homepage images
+      - (Initially empty, populated by admin)
+
+📄 .htaccess                           - Apache configuration
+   - Security headers
+   - URL rewriting
+   - Browser caching
+   - Upload limits
+
+================================================================================
+ADMIN FOLDER (/admin/)
+================================================================================
+
+📄 login.php                           - Admin login page
+   - Authentication form
+   - Password verification
+   - Session initialization
+   - Redirect logic
+
+📄 logout.php                          - Logout handler
+   - Session destruction
+   - Cookie cleanup
+   - Redirect to login
+
+📄 auth_check.php                      - Authentication middleware
+   - Login verification
+   - Session validation
+   - Access control
+
+📄 dashboard.php                       - Admin dashboard home
+   - Statistics display
+   - Recent items
+   - Quick actions
+   - Navigation sidebar
+
+📄 menu_items.php                      - Menu management
+   - List all menu items
+   - Add new items
+   - Edit existing items
+   - Delete items
+   - Image upload
+   - CRUD operations
+
+📄 homepage_content.php                - Content management
+   - Edit hero section
+   - Edit about section
+   - Edit contact info
+   - Live preview link
+
+📁 css/
+   📄 admin.css                        - Admin-specific styles
+      - Sidebar styles
+      - Dashboard cards
+      - Form styles
+      - Table styles
+      - Button styles
+      - Alert messages
+
+📄 .htaccess                           - Admin security configuration
+   - Additional protection
+   - Session timeout
+   - Hack attempt blocking
+
+================================================================================
+FILE COUNT SUMMARY
+================================================================================
+
+Documentation:         6 files
+Database:             1 file
+Includes:             3 files
+Public:               2 files + 2 folders
+Public CSS:           1 file
+Public JS:            1 file
+Public Images:        1 folder (uploads)
+Admin:                6 files + 1 folder
+Admin CSS:            1 file
+Configuration:        2 files (.htaccess)
+
+TOTAL FILES:          23 files
+TOTAL FOLDERS:        8 folders
+
+================================================================================
+FILE TYPES BREAKDOWN
+================================================================================
+
+PHP Files:            11
+CSS Files:            2
+JavaScript Files:     1
+SQL Files:            1
+Markdown Files:       4
+Text Files:           2
+Configuration Files:  2
+
+================================================================================
+KEY FILE RELATIONSHIPS
+================================================================================
+
+DATABASE LAYER:
+config.php → db.php → functions.php
+
+PUBLIC WEBSITE:
+index.php → includes/* → database
+
+ADMIN SYSTEM:
+login.php → auth_check.php → dashboard/menu_items/homepage_content
+         ↓
+    functions.php → db.php → database
+
+ASSETS:
+*.php files → css/styles.css
+           → js/main.js
+           → images/uploads/*
+
+================================================================================
+FILE DEPENDENCIES
+================================================================================
+
+ALL PHP FILES REQUIRE:
+- config.php (configuration)
+- db.php (database connection)
+- functions.php (helper functions)
+
+ALL ADMIN PHP FILES REQUIRE:
+- auth_check.php (authentication)
+- + above dependencies
+
+PUBLIC INDEX.PHP REQUIRES:
+- TailwindCSS CDN (external)
+- Google Fonts CDN (external)
+- Material Symbols CDN (external)
+
+================================================================================
+EXTERNAL DEPENDENCIES (CDN)
+================================================================================
+
+1. TailwindCSS
+   URL: https://cdn.tailwindcss.com
+   Purpose: CSS framework
+
+2. Google Fonts - Plus Jakarta Sans
+   URL: https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans
+   Purpose: Typography
+
+3. Google Material Symbols
+   URL: https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined
+   Purpose: Icons
+
+Note: All external dependencies loaded via CDN, no local installation needed
+
+================================================================================
+REQUIRED PERMISSIONS
+================================================================================
+
+MUST BE WRITABLE:
+- /public/images/uploads/  (777 or 755 depending on server)
+
+MUST BE READABLE:
+- All PHP, CSS, JS files (644)
+- All folders (755)
+
+MUST BE PROTECTED:
+- /includes/ folder (no direct access)
+- /database/ folder (no direct access)
+- .htaccess files (644)
+
+================================================================================
+MISSING / OPTIONAL FILES
+================================================================================
+
+NOT INCLUDED (User-provided):
+- Actual menu item images (use sample or upload own)
+- Real company photos (gallery uses placeholders)
+- Custom logo (optional)
+- Favicon (optional)
+
+COULD BE ADDED:
+- robots.txt (SEO)
+- sitemap.xml (SEO)
+- favicon.ico (branding)
+- .env file (if switching to environment variables)
+
+================================================================================
+INSTALLATION VERIFICATION
+================================================================================
+
+To verify complete installation, check for:
+✓ All 23 files present
+✓ All 8 folders created
+✓ uploads/ folder writable
+✓ Database file intact
+✓ No corrupt files
+
+================================================================================
+VERSION INFORMATION
+================================================================================
+
+Project Version:      1.0
+Created:             2024
+Last Updated:        2024
+File Manifest Ver:   1.0
+
+================================================================================
+BACKUP RECOMMENDATIONS
+================================================================================
+
+CRITICAL FILES TO BACKUP:
+1. /database/coffee_courtyard_db.sql
+2. /public/images/uploads/* (user uploads)
+3. /includes/config.php (if customized)
+4. All documentation files
+
+BACKUP FREQUENCY:
+- Database: Weekly (or after major changes)
+- Uploads: Weekly (or after adding images)
+- Config: After any changes
+- Docs: After updates
+
+BACKUP METHOD:
+- Export database from phpMyAdmin
+- Copy uploads folder
+- Save to external location
+
+================================================================================
+
+End of File Manifest
+Generated for Coffee CourtYard v1.0
+
+================================================================================

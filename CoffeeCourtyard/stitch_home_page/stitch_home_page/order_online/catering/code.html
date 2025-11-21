@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Online &amp; Catering - Coffee CourtYard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#dda15e",
+            "secondary": "#283618",
+            "background": "#fefae0",
+            "accent-1": "#606c38",
+            "accent-2": "#bc6c25",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background font-display text-secondary">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background/80 backdrop-blur-sm">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="text-secondary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-secondary text-lg font-bold leading-tight tracking-[-0.015em]">Coffee CourtYard</h2>
+</div>
+<nav class="hidden items-center gap-9 md:flex">
+<a class="text-secondary text-sm font-medium leading-normal hover:text-accent-1" href="#">Home</a>
+<a class="text-secondary text-sm font-medium leading-normal hover:text-accent-1" href="#">Menu</a>
+<a class="text-secondary text-sm font-medium leading-normal hover:text-accent-1" href="#">About</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Order &amp; Catering</a>
+<a class="text-secondary text-sm font-medium leading-normal hover:text-accent-1" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-primary/20 text-secondary hover:bg-primary/30">
+<span class="material-symbols-outlined text-secondary">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent-2 text-xs font-bold text-white">3</span>
+</button>
+<button class="md:hidden flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-primary/20 text-secondary hover:bg-primary/30">
+<span class="material-symbols-outlined text-secondary">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center px-4 py-8 sm:px-6 lg:px-8">
+<div class="w-full max-w-5xl">
+<!-- Hero Section -->
+<div class="mb-8">
+<div class="@container">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="A birds-eye view of a coffee spread with lattes and pastries on a wooden table" style='background-image: linear-gradient(rgba(40, 54, 24, 0.5) 0%, rgba(40, 54, 24, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBx_uJFCxQiK7u6Y7LYZecc4jWmZXdg3Izn9xvGpZhYUXKfseEwmDmrNCXMMCyGBQSiS-9ZY-JbVVGVIwj-0NcdycYvc2Y0npJnkytwSL_MFmImXNeBu9E6aiMF0NxDHbI4o5YOZLgPoIC_AqEBgzTXlI6DNs-aalMlk3kPZ5p3lyDMz0R470zWAGWEu2dKXnCgYErDVmrKRzeW0DhDQGInDxpNb5hksTldrkytW69KwpKXPtPTfxLa0mZPNVwpATlP5-MEnLMFgaU");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-background text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                Order Your Favorites or Plan Your Event
+                            </h1>
+<p class="text-background/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                Place your daily coffee order or let us cater your next special event.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Segmented Buttons / Tabs -->
+<div class="flex px-4 py-3">
+<div class="flex h-12 flex-1 items-center justify-center rounded-lg bg-primary/20 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-background has-[:checked]:shadow-sm has-[:checked]:text-secondary text-accent-1 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Place an Online Order</span>
+<input checked="" class="invisible w-0" name="order-type-toggle" type="radio" value="Place an Online Order"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-background has-[:checked]:shadow-sm has-[:checked]:text-secondary text-accent-1 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Inquire About Catering</span>
+<input class="invisible w-0" name="order-type-toggle" type="radio" value="Inquire About Catering"/>
+</label>
+</div>
+</div>
+<!-- Online Ordering Section -->
+<div id="online-order-section">
+<h2 class="text-secondary text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Create Your Order</h2>
+<div class="flex gap-3 p-3 flex-wrap">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 hover:bg-primary/30 transition-colors">
+<p class="text-secondary text-sm font-medium leading-normal">Hot Coffees</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 hover:bg-primary/30 transition-colors">
+<p class="text-secondary text-sm font-medium leading-normal">Iced Drinks</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 hover:bg-primary/30 transition-colors">
+<p class="text-secondary text-sm font-medium leading-normal">Baked Goods</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 hover:bg-primary/30 transition-colors">
+<p class="text-secondary text-sm font-medium leading-normal">Lunch Specials</p>
+</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 gap-6 p-4 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Product Card 1 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-background transition-shadow hover:shadow-lg">
+<div class="relative h-48 w-full">
+<img class="h-full w-full object-cover" data-alt="A latte with intricate foam art in a ceramic cup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiek9-ss6L7__aT31nNKrV3xZi_UbYVeaHc5hG3O4oEMgggMxJms8FrLFDvYX4SxhOe7ZuOAYp2AMhxtn1JwPBxRkN8N6WClttb8_Deh1wqPla10Qc1CCFJ2zZ5E35S0WO2f_8QCtgbSZlzAv0dJlz4Nf-5VUxV5cyD0ibprlhD_fK12vrSazHfq2zeGhoqW65Lzd0iYfEsOkmS9wiRwlpIeAIoF64UWy-hHc_B4kdrIcuZfYgY_G52ZcetsnVaheP267CNHGe7nA"/>
+</div>
+<div class="flex flex-col p-4">
+<div class="flex items-start justify-between">
+<h3 class="font-bold text-secondary">Artisan Latte</h3>
+<p class="font-bold text-accent-1">$4.50</p>
+</div>
+<p class="mt-1 text-sm text-accent-1/80">Espresso with perfectly steamed milk and a touch of foam.</p>
+<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary/20 h-10 px-4 text-sm font-bold text-secondary transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-background transition-shadow hover:shadow-lg">
+<div class="relative h-48 w-full">
+<img class="h-full w-full object-cover" data-alt="A golden-brown croissant on a white plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA38Hj8MYCnnjU_LPFsqRyZ-xgw15tJP67ELXK_CN8RSMdv1L9EUC6s161vSVulBLoWUJIbQSeURKz7EExgugZeRzAuoMnsqk1SUgR6poibnefXDWi1zwv8zvKYsOIlfY9lwVNzxnUC_20qoCQBnqDrsXk4FhUWdySRJFUpSxc72HdpSNRG-_oOBxPLV3WjaIZosdxgPLweIItq64mbnYDS3oSfIGvay3u-zDbKwSftdd6W-70xyQnP949TQQzyxd_In0a2yWo8W-g"/>
+</div>
+<div class="flex flex-col p-4">
+<div class="flex items-start justify-between">
+<h3 class="font-bold text-secondary">Morning Croissant</h3>
+<p class="font-bold text-accent-1">$3.75</p>
+</div>
+<p class="mt-1 text-sm text-accent-1/80">Flaky, buttery, and baked fresh every single morning.</p>
+<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary/20 h-10 px-4 text-sm font-bold text-secondary transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-background transition-shadow hover:shadow-lg">
+<div class="relative h-48 w-full">
+<img class="h-full w-full object-cover" data-alt="A club sandwich cut in half, showing layers of turkey, bacon, and lettuce." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqSZaOfrqgFlHJm9qY5DvgbDQQJDmdJye8XYPLzHWjV32PcULMyFPLiSAIvJ4QDlAYoIidXLn1u90syt-WmtIg6q4-R9y6sZUqDr2pV2HsH7VTlUipyqfn_ZS2yVKug97KTE_eNSZOKpB-ONuAwZjhvdyoEP6hQXp_0Vv0RAlC4pG3LYy_I8yS9hV1d66ldajmenedHg4OBQu2GqwX164b58Y86-ueON0rm5P8aEi6MzIIYdMPz9jy6bZ1_lJbHBznb9lAsLUP2LU"/>
+</div>
+<div class="flex flex-col p-4">
+<div class="flex items-start justify-between">
+<h3 class="font-bold text-secondary">Courtyard Club</h3>
+<p class="font-bold text-accent-1">$9.50</p>
+</div>
+<p class="mt-1 text-sm text-accent-1/80">Roasted turkey, crispy bacon, lettuce, and tomato on sourdough.</p>
+<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary/20 h-10 px-4 text-sm font-bold text-secondary transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Catering Inquiry Section -->
+<div class="hidden" id="catering-inquiry-section">
+<div class="px-4 py-5">
+<h2 class="text-secondary text-[22px] font-bold leading-tight tracking-[-0.015em]">Catering for Any Occasion</h2>
+<p class="mt-2 text-accent-1">From office meetings to private parties, bring the taste of Coffee CourtYard to your guests. Fill out the form below and we'll get back to you within 48 hours.</p>
+</div>
+<form class="space-y-6 p-4">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div>
+<label class="block text-sm font-medium text-secondary" for="name">Full Name</label>
+<input class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="name" name="name" placeholder="Jane Doe" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary" for="email">Email Address</label>
+<input class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary" for="phone">Phone Number</label>
+<input class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="phone" name="phone" placeholder="(555) 123-4567" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary" for="guests">Number of Guests</label>
+<input class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="guests" min="1" name="guests" placeholder="25" type="number"/>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-secondary" for="date">Event Date</label>
+<input class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="date" name="date" type="date"/>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-secondary" for="details">Event Details &amp; Special Requests</label>
+<textarea class="mt-1 block w-full rounded-md border-primary/30 bg-background shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="details" name="details" placeholder="Tell us more about your event..." rows="4"></textarea>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-secondary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90" type="submit">
+<span class="truncate">Send Inquiry</span>
+</button>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-primary/20 bg-background">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="flex flex-col items-start">
+<div class="flex items-center gap-2">
+<div class="size-5 text-secondary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h3 class="text-base font-bold text-secondary">Coffee CourtYard</h3>
+</div>
+<p class="mt-2 text-sm text-accent-1">Your daily escape for artisanal coffee and fresh bites.</p>
+</div>
+<div>
+<h3 class="text-base font-bold text-secondary">Contact &amp; Hours</h3>
+<ul class="mt-2 space-y-1 text-sm text-accent-1">
+<li>(123) 456-7890</li>
+<li>contact@coffeecourtyard.com</li>
+<li class="pt-1">Mon - Fri: 6am - 6pm</li>
+<li>Sat - Sun: 7am - 5pm</li>
+</ul>
+</div>
+<div>
+<h3 class="text-base font-bold text-secondary">Follow Us</h3>
+<div class="mt-2 flex space-x-4">
+<a class="text-accent-1 hover:text-accent-2" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-accent-1 hover:text-accent-2" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-accent-1 hover:text-accent-2" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.803 2.013 10.157 2 12.315 2zm-1.006 1.562c-2.673.05-3.04.058-4.093.104a3.332 3.332 0 00-1.258.284 3.332 3.332 0 00-1.2.784 3.332 3.332 0 00-.784 1.2 3.332 3.332 0 00-.284 1.258c-.046 1.053-.054 1.42-.104 4.093s.058 3.04.104 4.093c.036.828.16 1.353.284 1.688.13.346.32.65.592.922.272.272.576.462.922.592.335.124.86.248 1.688.284 1.053.046 1.42.054 4.093.104s3.04-.058 4.093-.104c.828-.036 1.353-.16 1.688-.284.346-.13.65-.32.922-.592.272-.272.462-.576.592-.922.124-.335.248-.86.284-1.688.046-1.053.054-1.42.104-4.093s-.058-3.04-.104-4.093c-.036-.828-.16-1.353-.284-1.688a3.332 3.332 0 00-.592-.922 3.332 3.332 0 00-.922-.592c-.335-.124-.86-.248-1.688-.284-1.053-.046-1.42-.054-4.093-.104zM12 8.118a5.524 5.524 0 100 11.049 5.524 5.524 0 000-11.049zm0 9.172a3.648 3.648 0 110-7.296 3.648 3.648 0 010 7.296z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-primary/20 pt-4 text-center text-sm text-accent-1">
+                © 2024 Coffee CourtYard. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggles = document.querySelectorAll('input[name="order-type-toggle"]');
+      const orderSection = document.getElementById('online-order-section');
+      const cateringSection = document.getElementById('catering-inquiry-section');
+
+      function handleToggle() {
+        if (document.querySelector('input[value="Place an Online Order"]').checked) {
+          orderSection.style.display = 'block';
+          cateringSection.style.display = 'none';
+        } else {
+          orderSection.style.display = 'none';
+          cateringSection.style.display = 'block';
+        }
+      }
+
+      toggles.forEach(toggle => {
+        toggle.addEventListener('change', handleToggle);
+      });
+      
+      // Initial check
+      handleToggle();
+    });
+  </script>
+</body></html>
